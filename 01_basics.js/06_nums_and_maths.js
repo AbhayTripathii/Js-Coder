@@ -1,13 +1,13 @@
 const score = 400
 // console.log(score);
 
-const balance = new Number(100)
+const balance = new Number(100)//new object defined karne ke liye
 // console.log(balance);
 
 // console.log(balance.toString().length);
-// console.log(balance.toFixed(1));
+// console.log(balance.toFixed(1));  ///////always be used in ecommerce like 100.235698===100.23only
 
-const otherNumber = 123.8966
+const otherNumber = 23.8966
 
 // console.log(otherNumber.toPrecision(4));
 
@@ -17,10 +17,10 @@ const hundreds = 1000000
 // +++++++++++++ Maths +++++++++++++++++++++++++++++
 
 // console.log(Math);
-// console.log(Math.abs(-4));
-// console.log(Math.round(4.6));
-// console.log(Math.ceil(4.2));
-// console.log(Math.floor(4.9));
+// console.log(Math.abs(-4));//abs=absolute
+// console.log(Math.round(4.6));round of of value
+// console.log(Math.ceil(4.2));round of but max value
+// console.log(Math.floor(4.9));round of but same front value
 // console.log(Math.min(4, 3, 6, 8));
 // console.log(Math.max(4, 3, 6, 8));
 
