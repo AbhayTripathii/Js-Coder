@@ -11,5 +11,5 @@
 
 
 let myCreatedDate = new Date(2075,6,11,10,5)
-console.log(myCreatedDate.toLocalString());
+console.log(myCreatedDate.toString());
 console.log(myCreatedDate.toLocaleString());
