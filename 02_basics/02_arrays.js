@@ -11,7 +11,7 @@ const dc_heroes = ["superman", "flash", "batman"]
 const allMerge = marvel_heroes.concat(dc_heroes) //// creating new array
 // console.log(allMerge);
 
-//using spread --------- ek glass ko neeche gira aur bikhar gya jaise 
+//using spread --------- ek glass neeche gira aur bikhar gya jaise 
 //(...marvel_heroes, ...dc_heroes) every character individual ho gaye hai
 //only two things are concatinate in concat method but spread has many things to add
 //like example:
