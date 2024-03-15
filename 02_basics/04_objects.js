@@ -26,10 +26,10 @@ const obj2 = {3: "c", 4: "d"}
 
 
 // const obj3 = {obj1, obj2}
-const obj3 = Object.assign({},obj1, obj2)
 // const obj3 = Object.assign({},obj1, obj2) // merge in objects like this
+const obj3 = Object.assign(obj1, obj2) // without this {} data store in obj1  /////// {} = target, source = obj1,obj2
 
-
+// easy way to assign this from spread operators ...
 const obj3 = {...obj1, ...obj2}
 // console.log(obj3);
 
@@ -56,7 +56,7 @@ users[1].email
 // console.log(Object.values(tinderUser));
 // console.log(Object.entries(tinderUser));
 
-// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); // check karna ki ye property kahi hai
 
 
 const course = {
