@@ -1,0 +1,16 @@
+for creating table
+
+for (let i = 0; i <= 10; i++) {
+    console.log(`Outer loop value: ${i}`)
+    for (let j = 0; j <= 10; j++) {
+        // console.log(`Inner loop value: ${j} and outer loop ${i}`) 
+        console.log(i + ' * ' + j + ' = ' + i * j)
+    }
+    
+}
+
+
+don't use loops without ++ with index
+like this  for (let i = 0; i <= 10; i)
+that is consumes more memory in your system 
+many time this was hanged up
