@@ -1,0 +1,61 @@
+/*prefer not to use var
+because var is use for block scope and funtional work
+*/
+
+
+
+// console.log(typeof score); //use of typeof
+// console.log(typeof(score)); // use of typeof but also use () methods format
+
+
+
+/*Conversion output NOTES
+40 => number
+null => object
+undefined => undefined
+True => Boolean
+*/
+
+
+
+False OR True
+// console.log(2 > 3); // false
+// console.log(2 <= 3); //true
+// console.log(2 >= 3); //false
+// console.log(2 < 3); //true
+// console.log(2 != 3); //true
+
+//Comparison on predictible
+// console.log(null = 0); //Error
+// console.log(null == 0); //false
+// console.log(null != 0); //true
+// console.log(null >= 0); //true
+// console.log(null <= 0); //true
+
+//undefined
+
+console.log(undefined = 0); //0
+console.log(undefined == 0); //false
+console.log(undefined != 0); //true
+console.log(undefined >= 0); //false
+console.log(undefined <= 0); //false
+
+
+
+
+
+Primitive
+7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+
+Reference (Non primitive)
+Array, Objects, Functions
+
+
+
+const balance = new Number(100)//new object defined karne ke liye
+console.log(balance.toFixed(1));  ///////always be used in ecommerce like 100.235698===100.23only
+
+
+let timeStamp = Date.now();
+console.log(timeStamp); //show milliseconds from 1 january 1970 to today
+console.log(myCreatedDate.getTime()); //show milliseconds from 1 january 1970 to 03-11-2024
