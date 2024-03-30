@@ -28,3 +28,12 @@ for (let i = 0; i < myArray.length; i++) {
     console.log(element);
     
 }
+
+
+
+// break and continue
+
+for (let index = 1; index <= 20; index++){
+    console.log(`value of i is ${index}`);
+   
+}
