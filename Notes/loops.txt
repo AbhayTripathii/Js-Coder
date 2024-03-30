@@ -14,3 +14,23 @@ don't use loops without ++ with index
 like this  for (let i = 0; i <= 10; i)
 that is consumes more memory in your system 
 many time this was hanged up
+
+
+
+// break and continue
+break get stopped every thing
+but 
+continue is skip the process one time then run again 
+
+
+
+while Array
+
+
+let myArray = ["cap","iron","Thor"]
+
+let arr = 0 // for increment decrement
+while (arr < myArray.length) {
+    console.log(`value is ${myArray[arr]}`);
+    arr++    
+}
