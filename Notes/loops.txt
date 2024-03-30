@@ -34,3 +34,20 @@ while (arr < myArray.length) {
     console.log(`value is ${myArray[arr]}`);
     arr++    
 }
+
+
+
+first he done work then initialize the condition
+// Do While loop
+let score = 1
+do {
+    console.log(`Score is ${score}`)
+    score++
+} while (score <= 10);
+
+
+
+/// remove array in output likr this 
+for (const [key, value] of map) {
+    console.log(key, ":-", value);
+}
