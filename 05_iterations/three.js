@@ -29,6 +29,16 @@ map.set('IN', "India")
 // console.log(map);
 
 for (const [key, value] of map) {
-    console.log(key, ":-", value);
+    // console.log(key, ":-", value);
     
+}
+
+
+const myObject = {
+    game1: 'BGMI',
+    game2: 'fortnite'
+}
+
+for (const key of myObject) {
+    console.log(key)    
 }

@@ -51,3 +51,7 @@ do {
 for (const [key, value] of map) {
     console.log(key, ":-", value);
 }
+
+
+
+forEach loops has many parameters like arr, index , item
