@@ -54,3 +54,13 @@ Array.from(temClass)
 
 stored the value
 const myConvertedArray = Array.from(temClass)
+
+
+////////////////////// target child element
+console.log(parent.firstElementChild);//// target first element
+console.log(parent.lastElementChild); //// target last element
+
+
+////////////////////// target parent element
+console.log(dayOne.parentElement);
+console.log(dayOne.nextElementSibling);
