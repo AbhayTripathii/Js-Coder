@@ -21,8 +21,8 @@
   <body>
     <nav>
       <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
+      <a target="_blank" href="https://www.instagram.com/abhay_coder/"
+        >Instagram</a
       >
     </nav>
     <div class="canvas">
@@ -138,8 +138,8 @@ buttons.forEach(function (button) {
   <body>
     <nav>
       <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
+      <a target="_blank" href="https://www.instagram.com/abhay_coder/"
+        >Instagram</a
       >
     </nav>
     <div class="container">
@@ -293,8 +293,8 @@ form.addEventListener('submit', function(e){
   <body>
     <nav>
       <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
+      <a target="_blank" href="https://www.instagram.com/abhay_coder/"
+        >Instagram</a
       >
     </nav>
     <div class="center">
