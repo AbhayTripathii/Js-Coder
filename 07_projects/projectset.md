@@ -3,7 +3,7 @@
 ## project link
 [Click here](https://stackblitz.com/edit/dom-project-7h4u4z?file=index.html)
 
-# All Projects code (Abhay Tripathi)
+# All Project code (Abhay Tripathi)
 
 ## project 1
 
