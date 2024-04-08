@@ -324,6 +324,7 @@ setInterval(function() {
 ```
 
 ## Project 4 
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -495,7 +496,6 @@ function validateGuess(guess){
     alert('please enter a valid number')
   } else if(guess < 1){
     alert('please enter a number more than 1')
-  }
   } else if(guess > 100){
     alert('please enter a number less than 100')
   } else {
