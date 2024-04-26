@@ -10,5 +10,20 @@
     <button id="stop">Stop</button>
 </body>
 <script>
+    const sayAbhay = function(){
+        console.log("Abhay")
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = " Best js Series"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    } )
+
+    
 </script>
 </html>
