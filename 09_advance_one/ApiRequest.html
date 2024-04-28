@@ -15,12 +15,12 @@
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/abhaytripathii' 
-    const xhr = new XMLHttpRequest()
+    const xhr = new XMLHttpRequest()    //XMLHttpRequested for API send and recieve 
     xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function(){ //constinuosly change
-        console.log(xhr.readyState);
+        console.log(xhr.readyState); //state on 1 because he stop then go on line no 20
         if(xhr.readyState === 4){
-            const data = JSON.parse(this.responseText)
+            const data = JSON.parse(this.responseText) //this is use for current context
             console.log(data);
             console.log(data.followers);
         }

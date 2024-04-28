@@ -1,0 +1,130 @@
+C++ is the core language of js, python and others 
+but this language is wrapper of this C++
+
+V8 engine is very useful to learn debugger 
+----> in this go (d8-console.cc)  for see where to get console.log and see how to implementation this
+
+===> where is conolse 
+
+void D8Console::Log(const debug::ConsoleCallArguments& args,
+                    const v8::debug::ConsoleContext&) {
+  WriteToFile(nullptr, stdout, isolate_, args);
+}
+
+void D8Console::Error(const debug::ConsoleCallArguments& args,
+                      const v8::debug::ConsoleContext&) {
+  WriteToFile("console.error", stderr, isolate_, args);
+}
+
+void D8Console::Warn(const debug::ConsoleCallArguments& args,
+                     const v8::debug::ConsoleContext&) {
+  WriteToFile("console.warn", stdout, isolate_, args);
+}
+
+void D8Console::Info(const debug::ConsoleCallArguments& args,
+                     const v8::debug::ConsoleContext&) {
+  WriteToFile("console.info", stdout, isolate_, args);
+}
+
+void D8Console::Debug(const debug::ConsoleCallArguments& args,
+                      const v8::debug::ConsoleContext&) {
+  WriteToFile("console.debug", stdout, isolate_, args);
+}
+
+void D8Console::Profile(const debug::ConsoleCallArguments& args,
+                        const v8::debug::ConsoleContext&) {
+  if (!profiler_) {
+    profiler_ = CpuProfiler::New(isolate_);
+  }
+  profiler_active_ = true;
+  profiler_->StartProfiling(String::Empty(isolate_), CpuProfilingOptions{});
+}
+
+void D8Console::ProfileEnd(const debug::ConsoleCallArguments& args,
+                           const v8::debug::ConsoleContext&) {
+  if (!profiler_) return;
+  CpuProfile* profile = profiler_->StopProfiling(String::Empty(isolate_));
+  profiler_active_ = false;
+  if (!profile) return;
+  if (Shell::HasOnProfileEndListener(isolate_)) {
+    StringOutputStream out;
+    profile->Serialize(&out);
+    Shell::TriggerOnProfileEndListener(isolate_, out.result());
+  } else {
+    FileOutputStream out(kCpuProfileOutputFilename);
+    profile->Serialize(&out);
+  }
+  profile->Delete();
+}
+
+void D8Console::Time(const debug::ConsoleCallArguments& args,
+                     const v8::debug::ConsoleContext&) {
+  if (i::v8_flags.correctness_fuzzer_suppressions) return;
+  if (args.Length() == 0) {
+    default_timer_ = base::TimeTicks::Now();
+  } else {
+    Local<Value> arg = args[0];
+    Local<String> label;
+    v8::TryCatch try_catch(isolate_);
+    if (!arg->ToString(isolate_->GetCurrentContext()).ToLocal(&label)) return;
+    v8::String::Utf8Value utf8(isolate_, label);
+    std::string string(*utf8);
+    auto find = timers_.find(string);
+    if (find != timers_.end()) {
+      find->second = base::TimeTicks::Now();
+    } else {
+      timers_.insert(std::pair<std::string, base::TimeTicks>(
+          string, base::TimeTicks::Now()));
+    }
+  }
+}
+
+void D8Console::TimeEnd(const debug::ConsoleCallArguments& args,
+                        const v8::debug::ConsoleContext&) {
+  if (i::v8_flags.correctness_fuzzer_suppressions) return;
+  base::TimeDelta delta;
+  if (args.Length() == 0) {
+    delta = base::TimeTicks::Now() - default_timer_;
+    printf("console.timeEnd: default, %f\n", delta.InMillisecondsF());
+  } else {
+    base::TimeTicks now = base::TimeTicks::Now();
+    Local<Value> arg = args[0];
+    Local<String> label;
+    v8::TryCatch try_catch(isolate_);
+    if (!arg->ToString(isolate_->GetCurrentContext()).ToLocal(&label)) return;
+    v8::String::Utf8Value utf8(isolate_, label);
+    std::string string(*utf8);
+    auto find = timers_.find(string);
+    if (find != timers_.end()) {
+      delta = now - find->second;
+      timers_.erase(find);
+    }
+    printf("console.timeEnd: %s, %f\n", *utf8, delta.InMillisecondsF());
+  }
+}
+
+void D8Console::TimeStamp(const debug::ConsoleCallArguments& args,
+                          const v8::debug::ConsoleContext&) {
+  if (i::v8_flags.correctness_fuzzer_suppressions) return;
+  base::TimeDelta delta = base::TimeTicks::Now() - default_timer_;
+  if (args.Length() == 0) {
+    printf("console.timeStamp: default, %f\n", delta.InMillisecondsF());
+  } else {
+    Local<Value> arg = args[0];
+    Local<String> label;
+    v8::TryCatch try_catch(isolate_);
+    if (!arg->ToString(isolate_->GetCurrentContext()).ToLocal(&label)) return;
+    v8::String::Utf8Value utf8(isolate_, label);
+    std::string string(*utf8);
+    printf("console.timeStamp: %s, %f\n", *utf8, delta.InMillisecondsF());
+  }
+}
+
+void D8Console::Trace(const debug::ConsoleCallArguments& args,
+                      const v8::debug::ConsoleContext&) {
+  if (i::v8_flags.correctness_fuzzer_suppressions) return;
+  i::Isolate* i_isolate = reinterpret_cast<i::Isolate*>(isolate_);
+  i_isolate->PrintStack(stderr, i::Isolate::kPrintStackConcise);
+}
+
+}  // namespace v8
