@@ -1,3 +1,5 @@
+//++++++++++++++ Promise One +++++++++++++++++++++++
+
 const promiseOne = new Promise(function(resolve, reject){
     //do an sync task
     // DB calls, cryptography, network
@@ -7,10 +9,12 @@ const promiseOne = new Promise(function(resolve, reject){
     }, 1000)
 })
 
+
 promiseOne.then(function(){
     console.log("Promise consumed");
 })
 
+//++++++++++++++ Promise Two +++++++++++++++++++++++
 
 new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -21,6 +25,9 @@ new Promise(function(resolve, reject){
     console.log("Async 2 resolved")
 })
 
+
+//++++++++++++++ Promise Three +++++++++++++++++++++++
+
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
         resolve({username: "Abhay", email: "abhay@example.com"})
@@ -30,6 +37,9 @@ const promiseThree = new Promise(function(resolve, reject){
 promiseThree.then(function(user){
     console.log(user);    
 })
+
+
+//++++++++++++++ Promise four +++++++++++++++++++++++
 
 
 const promiseFour = new Promise(function(resolve, reject){
@@ -55,6 +65,7 @@ promiseFour
 }).finally(()=> console.log("The promise is either resolved or rejected"))
 
 
+//++++++++++++++ Promise Five +++++++++++++++++++++++
 
 
 const promiseFive = new Promise(function(resolve, reject){
@@ -80,3 +91,28 @@ async function consumePromiseFive(){
 }
 
 consumePromiseFive()
+
+// async function getAllUsers(){
+//     try {
+//         const response = await fetch('https://api.github.com/users/abhaytripathii')
+//         // console.log(response);
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log("E: ", error);
+//     }
+// }
+
+// getAllUsers()
+
+
+// ++++++++++ OR
+
+fetch('https://api.github.com/users/abhaytripathii')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
