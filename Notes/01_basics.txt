@@ -1,6 +1,6 @@
-/*prefer not to use var
+prefer not to use var
 because var is use for block scope and funtional work
-*/
+
 
 
 
@@ -14,7 +14,7 @@ because var is use for block scope and funtional work
 null => object
 undefined => undefined
 True => Boolean
-*/
+
 
 
 
