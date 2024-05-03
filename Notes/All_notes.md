@@ -414,3 +414,33 @@ void D8Console::Trace(const debug::ConsoleCallArguments& args,
 
 ```
 
+# OOP notes
+
+## this
+this is use for cureent context like one monday in a month 
+
+##### window is a global object
+
+## new keyword
+#### Whenever a new keyword is created, first of all a new empty object is created which is called instance.
+Step 1 ---> new empty object create.  
+Step 2 ---> call constructor function from new keyword (pack all argument)  
+Step 3 ---> inject all thing from this. keyword in code  
+Step 4 ---> function ready
+
+### create one user then second but not same
+```javascript
+function User(username, loginCount, isLoggedIn){
+    this.username = username // same but diffrent from this keyword
+    this.loginCount = loginCount
+    this.isLoggedIn = isLoggedIn
+
+    return this
+}
+
+const userOne = new User("abhay", 12, true)
+const userTwo = new User("Tripathi", 15, false)
+
+console.log(userOne)
+console.log(userTwo)
+```
