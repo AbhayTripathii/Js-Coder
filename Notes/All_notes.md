@@ -200,6 +200,29 @@ const newNums = myNumbers
                 /.filter( (num) => { return num >= 40})
 ```
 
+### (9) Basic calculation from using loops
+
+```javascript
+// sqaure calculation
+
+const num = prompt("Please enter a number");
+
+function doubleCalculate() {
+  console.log(`The square of ${num} is:- ${num * num}`);
+  //   return num;
+}
+doubleCalculate();
+```
+
+### (10) Table of 2 - 10 
+```javascript
+const num = prompt("Please enter a number");
+
+for (let i = 0; i < 11; i++) {
+  console.log(num * i);
+}
+```
+
 
 # DOM_notes
 
