@@ -1,67 +1,71 @@
-// let myName = "abhay     "
-// let mychannel = "code     "
+// this is challenge ---> to create a prototype for give trueLength of extra spacebar without using trim() methods
 
-// console.log(myName.trueLength);
+// let myName = "abhay     ";
+// console.log(myName.truelength);
 
-
-let myHeros = ["thor", "spiderman"]
-
+let myHeros = ["thor", "spiderman"];
 
 let heroPower = {
-    thor: "hammer",
-    spiderman: "sling",
+  thor: "hammer",
+  spiderman: "web",
 
-    getSpiderPower: function(){
-        console.log(`Spidy power is ${this.spiderman}`);
-    }
-}
+  getSpiderPower: function () {
+    console.log(`Spidy power is ${this.spiderman}`);
+  },
+};
 
-Object.prototype.hitesh = function(){
-    console.log(`hitesh is present in all objects`);
-}
+// humne yaha par ek abhay name se prototype create kiya
+Object.prototype.abhay = function () {
+  console.log("hey this is an Object");
+};
 
-Array.prototype.heyAbhay = function(){
-    console.log(`Abhay says hello`);
-}
+Array.prototype.heyAbhay = function () {
+  console.log(`hey this is an array`);
+};
 
-// heroPower.abhay()
-// myHeros.abhay()
-// myHeros.heyAbhay()
-// heroPower.heyAbhay()
+// heroPower.abhay();
+
+// myHeros.abhay();
+// myHeros.heyAbhay();
+// heroPower.heyAbhay();
 
 // inheritance
 
 const User = {
-    name: "code",
-    email: "code@example.com"
-}
+  name: "abhay",
+  email: "abhay@gmail.com",
+};
 
-const Student = {
-    watchVideo: true
-}
+const student = {
+  learn: true,
+};
 
-const LearningSupport = {
-    isAvailable: false
-}
+const learnSupport = {
+  isAvailable: false,
+};
 
-const TASupport = {
-    makeAssignment: 'JS assignment',
-    fullTime: true,
-    __proto__: LearningSupport
-}
+const TAsupports = {
+  makeAssignment: "JS assignment",
+  fullTime: true,
+  __proto__: learnSupport,
+};
 
-Student.__proto__ = User
+student.__proto__ = User;
 
-// modern syntax
-Object.setPrototypeOf(LearningSupport, Student)
+// moder syntax
 
-let anotherUsername = "coding     "
+Object.setPrototypeOf(learnSupport, student);
 
-String.prototype.trueLength = function(){
-    console.log(`${this}`);
-    console.log(`True length is: ${this.trim().length}`);
-}
+let anotherUserName = "chaiaurcode    ";
 
-anotherUsername.trueLength()
-"abhay".trueLength()
-"iceTea".trueLength()
+// create a prototype for string
+String.prototype.trueLength = function () {
+  console.log(`${this}`);
+  console.log(`True length is: ${this.trim().length}`);
+};
+
+anotherUserName.trueLength();
+"abhay".trueLength();
+"annu    ".trueLength();
+"shivam    ".trueLength();
+"created    ".trueLength();
