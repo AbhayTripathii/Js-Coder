@@ -1,4 +1,7 @@
 # 01_basics_notes
+
+### In javascript
+##### talks  Array = Element  Object = Properties
  
 ### (1) prefer not to use var
 because var is use for block scope and funtional work
