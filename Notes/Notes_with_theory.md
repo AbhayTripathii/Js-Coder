@@ -1,9 +1,9 @@
 ## Variables
 Variables in JavaScript are containers for storing data. JavaScript allows the usage of variables in the following three ways:
 
-1. **var**	    Used to initialize to value, redeclared and its value can be reassigned.	
-2. **let**	    Similar to var but is block scoped	
-3. **const**	Used to declare a fixed value that cannot be changed.	
+1. `var`	    Used to initialize to value, redeclared and its value can be reassigned.	
+2. `let`	    Similar to var but is block scoped	
+3. `const`	Used to declare a fixed value that cannot be changed.	
 
 ```javascript
 console.log("Using var Keyword");
@@ -41,28 +41,28 @@ console.log(number); // Output: 48
 
 ## Datatypes
 
-1. **Number**	Numeric values can be real number or integers.  
-***var x= number;***
-2. **String**	Series of multiple characters written in quotes.  
-***var x= “characters”;***
-3. **Boolean**	Has only two values true or false.	var x= true/false;
-4. **Null**	Special value that represents that the variable is empty.  
-***var x= null;***
-5. **Undefined**	Represents a variable which is declared but not assigned any value.	  
-***let x; / let x= undefined;***
-6. **Object**	Complex data type that allows us to store a collection of data.	  
-***var x= {  
+1. `Number`	Numeric values can be real number or integers.  
+`*var x= number;`*
+2. `String`	Series of multiple characters written in quotes.  
+`*var x= “characters”;`*
+3. `Boolean`	Has only two values true or false.	var x= true/false;
+4. `Null`	Special value that represents that the variable is empty.  
+`*var x= null;`*
+5. `Undefined`	Represents a variable which is declared but not assigned any value.	  
+`*let x; / let x= undefined;`*
+6. `Object`	Complex data type that allows us to store a collection of data.	  
+`*var x= {  
     key: “value”;  
     key: “value”;  
-}***
-7. **Array**	Stores multiple values of same type in a single variable.  
-***var x =[‘y1’, ‘y2′,’y3′,’y4’];
-y: any datatype***
+}`*
+7. `Array`	Stores multiple values of same type in a single variable.  
+`*var x =[‘y1’, ‘y2′,’y3′,’y4’];
+y: any datatype`*
 
-8. **Function**	Functions are objects that can be called to execute a block of code.  
-**function x(arguments){
+8. `Function`	Functions are objects that can be called to execute a block of code.  
+`function x(arguments){
     block of code
-}**
+}`
 
 ```javascript
 // String
@@ -105,22 +105,22 @@ console.log(object);
 
 ## Operators
 
-1. **Arithmetic**	Used to perform basic arithmetic operations on variables(operands).   
-**+,-,*,/,%,++,–**
-2. **Comparison**	used to compare two operands.  
-**==, ===,!=,>,<,>=,<=**
-3. **Bitwise**	Used to perform bitwise operations.  
-**&, | , ^,~,<<, >>, >>>**
-4. **Logical**	
+1. `Arithmetic`	Used to perform basic arithmetic operations on variables(operands).   
+`+,-,*,/,%,++,–`
+2. `Comparison`	used to compare two operands.  
+`==, ===,!=,>,<,>=,<=`
+3. `Bitwise`	Used to perform bitwise operations.  
+`&, | , ^,~,<<, >>, >>>`
+4. `Logical`	
 There are three logical operators in javascript.  
-**logical AND:** When all the operands are true  
---**exp1 && exp2**   
-**logical OR:** When one or more than one operands are true   
---**exp1 ||exp2**  
-**logical NOT:** Converts true to false  
---**!exp**
-5. **Assignment**	Assignment operators assign values to JavaScript variables.  
-**=, +=,-=,*=,/=,%=**
+`logical AND:` When all the operands are true  
+--`exp1 && exp2`   
+`logical OR:` When one or more than one operands are true   
+--`exp1 ||exp2`  
+`logical NOT:` Converts true to false  
+--`!exp`
+5. `Assignment`	Assignment operators assign values to JavaScript variables.  
+`=, +=,-=,*=,/=,%=`
 
 ```javascript
 let x = 5;
@@ -152,7 +152,7 @@ console.log("x-- = ", x--);
 console.log("x = ", x); // 5
 
 // Exponentiation
-console.log("x ** y =", x ** y);
+console.log("x ` y =", x ` y);
 
 // Comparison
 console.log(x > y); // true
@@ -183,14 +183,14 @@ console.log(!(x < 6)); // false
 ```
 
 ## Functions
-1. **parseInt()**	Parses an argument passed to it and returns an integral number.
-2. **parseFloat()**	Parses the argument and returns a floating-point number.
-3. **isNaN()**	Determines if a given value is Not a Number.
-4. **Number()**	Returns an argument after converting it to number.
-5. **eval()	Used** for evaluating JavaScript programs presented as strings.
-6. **prompt()**	Creates a dialogue box for taking input from the user.
-7. **encodeURI()**	Encodes a URI into a UTF-8 encoding scheme.
-8. **match()**	Used to search a string for a match against regular expression.
+1. `parseInt()`	Parses an argument passed to it and returns an integral number.
+2. `parseFloat()`	Parses the argument and returns a floating-point number.
+3. `isNaN()`	Determines if a given value is Not a Number.
+4. `Number()`	Returns an argument after converting it to number.
+5. `eval()	Used` for evaluating JavaScript programs presented as strings.
+6. `prompt()`	Creates a dialogue box for taking input from the user.
+7. `encodeURI()`	Encodes a URI into a UTF-8 encoding scheme.
+8. `match()`	Used to search a string for a match against regular expression.
 
 ```javascript
 // JS parseInt function
@@ -229,22 +229,418 @@ console.log(encodedURL);
 Arrays use numbers as index to access its “elements”.  
 Declaration of an Array: There are basically two ways to declare an array.  
 Example:  
-**var House = [ ]; // Method 1  
-var House = new Array(); // Method 2**
+`var House = [ ]; // Method 1 `
+
+`var House = new Array(); // Method 2`
 
 There are various operations
 
-1. push()	Adds a new element at the very end of an array.
-2. pop()	Removes the last element of an array.
-3. concat()	Joins various arrays into a single array.
-4. shift()	Removes the first element of an array
-5. unShift()	Adds new elements at the beginning of the array
-6. reverse()	Reverses the order of the elements in an array.
-7. slice()	Pulls a copy of a part of an array into a new array.
-8. splice()	Adds elements in a particular way and position.
-9. toString()	Converts the array elements into strings.
-10. valueOf()	Returns the primitive value of the given object.
-11. indexOf()	Returns the first index at which a given element is found.
-12. lastIndexOf()	Returns the final index at which a given element appears.
-13. join()	Combines elements of an array into one single string and then returns it
-14. sort()	Sorts the array elements based on some condition.
+1. `push()`	Adds a new element at the very end of an array.
+2. `pop()`	Removes the last element of an array.
+3. `concat()`	Joins various arrays into a single array.
+4. `shift()`	Removes the first element of an array
+5. `unShift()`	Adds new elements at the beginning of the array
+6. `reverse()`	Reverses the order of the elements in an array.
+7. `slice()`	Pulls a copy of a part of an array into a new array.
+8. `splice()`	Adds elements in a particular way and position.
+9. `toString()`	Converts the array elements into strings.
+10. `valueOf()`	Returns the primitive value of the given object.
+11. `indexOf()`	Returns the first index at which a given element is found.
+12. `lastIndexOf()`	Returns the final index at which a given element appears.
+13. `array[index]`	Accesses an element at the specified index in the array.
+14. `array[index]` = value	Modifies the element at the specified index in the array.
+15. `array.forEach()`	Executes a provided function once for each array element.
+16. `array.map()`	Creates a new array with the results of calling a function on every element.
+17. `array.filter()`	Creates a new array with elements that pass a test.
+18. `array.reduce(, initialValue)`	Reduces the array to a single value.
+19. `array.find()`	Returns the first element that satisfies a condition.
+20. `array.findIndex()`	Returns the index of the first element that satisfies a condition.
+21. `array.some()`	Checks if at least one element passes a test.
+22. `array.every()`	Checks if all elements pass a test.
+23. `array.includes(value)`	Checks if an array contains a certain value.
+24. `array.sort(compareFunction)`	Sorts an array in place.
+25. `array.length` = newLength	Changes the length of an array.
+26. `array.fill(value, start, end)`	Fills the specified elements of an array with a value.
+27. `Array.isArray(array)`	Checks whether a variable is an array.
+28. `array.flat(depth)`	Flattens nested arrays.
+29. `JSON.parse(JSON.stringify(array))`	Creates a deep copy of an array.
+30. `array.length` === 0	Checks if an array is empty.
+31. `array.join(separator)`*	Joins all elements of an array into a string.
+32. `array.map((element, index) => { ... })`	Maps each element to an object with its index.
+33. `Array.from(new Set(array))`	Removes duplicate elements from an array.
+34. `array[0].map((_, colIndex) => array.map(row => row[colIndex]))`	Transposes a 2D 20. array.
+35. `array.reduce((acc, value) => (value === search ? acc + 1 : acc), 0)`	Counts occurrences of an element.
+36. `array.reduce((acc, value, index) => (index % size === 0 ? acc.push([value]) : acc[acc.length - 1].push(value), acc), [])`	Chunks an array into smaller arrays.
+37. `array1.map((value, index) => [value, array2[index]])`	Zips two arrays together.
+38. `array1.filter(value => array2.includes(value))`	Intersects two arrays, returning common elements.
+39. `array1.filter(value => !array2.includes(value))` Finds elements in the first array not present in the second array.
+40. `Array.from(new Set([...array1, ...array2]))`	Unions two arrays, removing duplicates.
+41. `array.slice(n).concat(array.slice(0, n))`	Rotates an array by a given number of positions.
+42. `array.sort(() => Math.random() - 0.5)`	Shuffles the elements of an array randomly.
+43. `Array.from(new Set(array))`	Removes duplicate elements from an array.
+
+
+```javascript
+// Declaring and initializing arrays
+
+// Number Array
+let arr = [10, 20, 30, 40, 50];
+let arr1 = [110, 120, 130, 140];
+
+// String array
+let string_arr = ["Alex", "peter", "chloe"];
+
+// push: Adding elements at the end of the array
+arr.push(60);
+console.log("After push op " + arr);
+
+// unshift() Adding elements at the start of the array
+arr.unshift(0, 10);
+console.log("After unshift op " + arr );
+
+// pop: removing elements from the end of the array
+arr.pop();
+console.log("After pop op" + arr);
+
+// shift(): Removing elements from the start of the array
+arr.shift();
+console.log("After shift op " + arr);
+
+// splice(x,y): removes x number of elements
+// starting from index y
+arr.splice(2, 1);
+console.log("After splice op" + arr);
+
+// reverse(): reverses the order of elements in array
+arr.reverse();
+console.log("After reverse op" + arr);
+
+// concat(): merges two or more array
+console.log("After concat op" + arr.concat(arr1));
+
+```
+
+
+## Loops
+With loops you can evaluate a set of instructions/functions repeatedly until certain condition is reached.
+
+1. `for`	  
+for  
+Loops over a block of with conditions specified in the beginning.  
+`*for (initialization condition; testing condition;increment/decrement)  
+{  
+    statement(s)  
+}`*
+2. `while`	  
+Entry control loop which executes after checking the condition.	`*while (boolean condition)
+{
+    loop statements…
+}`*
+3. `do-while`	  
+Exit Control Loop which executes once before checking the condition.  
+`*do  
+{  
+    statements..  
+    }  
+    while (condition);`*
+
+4. `for-in`	Another version of for loop to provide a simpler way to iterate.  
+`*for (variableName in Object)  
+{  
+    statement(s)  
+    }`*
+
+```javascript
+// Illustration of for loop
+let x;
+
+// for loop begins when x=2
+// and runs till x <=4
+for (x = 2; x <= 4; x++) {
+    console.log("Value of x:" + x);
+}
+
+// Illustration of for..in loop
+// creating an Object
+let languages = {
+    first: "C",
+    second: "Java",
+    third: "Python",
+    fourth: "PHP",
+    fifth: "JavaScript",
+};
+
+// Iterate through every property of 
+// the object languages and print all
+// of them using for..in loops
+for (itr in languages) {
+    console.log(languages[itr]);
+}
+
+// Illustration of while loop
+let y = 1;
+
+// Exit when x becomes greater than 4
+while (y <= 4) {
+    console.log("Value of y:" + y);
+
+    // Increment the value of y for
+    // next iteration
+    x++;
+}
+
+// Illustration of do-while loop
+let z = 21;
+
+do {
+
+    // The line while be printer even if 
+    // the condition is false
+    console.log("Value of z:" + z);
+
+    z++;
+} while (z < 20);
+
+```
+
+## If-else
+If-else is used in JavaScript to execute a block of codes conditionally.
+```javascript
+if ( condition ) {
+   // Executes this block if
+   // condition is true
+}
+else {
+   // Executes this block if
+   // condition is false
+}
+
+
+// JavaScript program to illustrate if-else statement
+const i = 10;
+
+if (i < 15)
+    console.log("Value of i is less than 10");
+else
+    console.log("Value of i is greater than 10");
+
+```
+
+## Strings
+1. `concat()`	Used for concatenating multiple strings into a single string.
+2. `match()`	Used for finding matche of a string against a provided pattern.
+3. `replace()`	Used for finding and replacing a given text in string.
+4. `substr()`	Used to extract length characters from a given string.
+5. `slice()`	Used for extracting an area of the string and returs it
+6. `lastIndexOf()`	Used to return the index (position) of the last occurrence of a specified value.
+7. `charAt()`	Used for returning the character at a particular index of a string
+8. `valueOf()`	Used for returning the primitive value of a string object.
+9. `split()`	Used for splitting a string object into an array of strings.
+10. `toUpperCase()`	Used for converting strings to upper case.
+11. `toLoweCase()`	Used for converting strings to lower case.
+
+```javascript
+let mcu = 'MCU ';
+let marvel = 'stands-for-MarvelCinematicUniverse';
+
+// Print the string as it is
+console.log(mcu);
+console.log(marvel);
+
+// concat() method
+console.log(mcu.concat(marvel));
+
+// match() method
+console.log(marvel.match(/arv/));
+
+// charAt() method
+console.log(marvel.charAt(5));
+
+// valueOf() method
+console.log(marvel.valueOf());
+
+// lastIndexOf() method
+console.log(marvel.lastIndexOf('Cinematic'));
+
+// substr() method
+console.log(marvel.substr(6));
+
+// indexOf() method
+console.log(mcu.indexOf('M'));
+
+// replace() method
+console.log(mcu.replace('CU', 'cu'));
+
+// slice() method
+console.log(marvel.slice(2, 8));
+
+// split() method
+console.log(marvel.split('-'));
+
+// toUpperCase method
+console.log(marvel.toUpperCase(marvel));
+
+// toLowerCase method
+console.log(marvel.toLowerCase(marvel));
+
+```
+
+## Regular Expressions
+A regular expression is a sequence of characters that forms a search pattern. The search pattern can be used for text search and text to replace operations.
+
+Syntax:  
+/pattern/modifiers;  
+
+You can also use regEx() to create regular expression in javascript: 
+
+`const regex1 = /^ab/;`   
+`const regex2 = new Regexp('/^ab/');`
+
+#### Regular Expression Modifiers:
+
+1. `[abc]`	Find any of the character inside the brackets
+2. `[0-9]`	Find any of the digits between the brackets 0 to 9
+3. `(x/y)`	Find any of the alternatives between x or y separated with |
+
+#### Regular Expression Patterns:
+1.   `.`	Used for finding a single character, except newline or line terminator
+2.   `\d`	Used to find a digit.
+3.   `\s`	Used to find a whitespace character
+4.   `\uxxxx`	Used to find the Unicode character specified by the hexadecimal number
+
+## Quantifiers:
+They provide the minimum number of instances of a character, group, or character class in the input required to find a match.
+
+1. `n+`	Used to match any string that contains at least one n
+2. `n*`	Used to match any string that contains zero or more occurrences of n
+3. `n?`	Used to matches any string that contains zero or one occurrences of n
+4. `n{x}`	Matches strings that contain a sequence of X n’s
+5. `^n`	Matches strings with n in the first place
+
+```javascript
+// Program to validate the email address
+function validateEmail(email) {
+
+    // Regex pattern for email
+    const re = /\S+@\S+\.\S+/g;
+
+    // Check if the email is valid
+    let result = re.test(email);
+
+    if (result) {
+        console.log("The email is valid.");
+    } else {
+        console.log("The email is not valid.");
+    }
+}
+
+// Input Email Id
+let email = "abc@gmail.com"
+validateEmail(email);
+
+email = "abc#$#@45com"
+validateEmail(email);
+
+```
+
+## Data Transformation
+
+1. `map()`	Iterates over an array and calls function on every element of array.	 
+**array.map(function(currentValue, index, arr), thisValue)** 
+2. `filter()`	Create a new array from a given array after applying a condition. 
+**array.filter(callback(element, index, arr),
+thisValue)**
+3. `reduce()`	Reduces the array to single value using a function  
+**array.reduce( function(total, currentValue, currentIndex, arr),
+initialValue )**
+
+```javascript
+const num = [16, 25];
+
+/* Using JS map() Method */
+console.log(num.map(Math.sqrt));
+
+const ages = [19, 37, 16, 42];
+
+/* Using JS filter() Method */
+console.log(ages.filter(checkAdult));
+
+function checkAdult(age) {
+    return age >= 18;
+}
+
+/* Using JS reduce() Method */
+const numbers = [165, 84, 35];
+console.log(numbers.reduce(myFunc));
+
+function myFunc(total, num) {
+    return total - num;
+}
+
+```
+
+## Date objects
+    new Date()
+    new Date(milliseconds)
+    new Date(dataString)
+    new Date(year, month, date, hour, minute, second, millisecond)
+
+1. `getDate()`	Used to return the month’s day as a number (1-31)
+2. `getTime()`	Used to get the milliseconds since January 1, 1970
+3. `getMinutes()`	Returns the current minute (0-59)
+4. `getFullYear()`	Returns the current year as a four-digit value (yyyy)
+5. `getDay()`	Returns a number representing the weekday (0-6) to
+6. `parse()`	Returns the number of milliseconds since January 1, 1970
+7. `setDate()`	Returns the current date as a number (1-31)
+8. `setTime()`	Sets the time (milliseconds since January 1, 1970)  
+
+```javascript
+// Here a date has been assigned by creating a date obj
+let DateObj = new Date("October 13, 1996 05:35:32");
+
+// getDate()
+let A = DateObj.getDate();
+
+// Printing date of the month
+console.log(A);
+
+// getTime()
+let B = DateObj.getTime();
+
+// Printing time in milliseconds.
+console.log(B);
+
+// getMinutes()
+let minutes = DateObj.getMinutes();
+
+// Printing minute.
+console.log(minutes);
+
+// getFullYear()
+let C = DateObj.getFullYear();
+
+// Printing year
+console.log(C);
+
+// getDay()
+let Day = DateObj.getDay();
+
+// Printing day of the week
+console.log("Number of Day: " + Day);
+
+// setDate
+DateObj.setDate(15);
+
+let D = DateObj.getDate();
+
+// Printing new date of the month
+console.log(D);
+
+// parse(), taking wrong date string as input.
+let date = "February 48, 2018 12:30 PM";
+
+// calling parse function.
+let msec = Date.parse(date);
+console.log(msec);
+
+```
