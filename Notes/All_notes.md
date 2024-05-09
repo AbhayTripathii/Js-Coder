@@ -1,7 +1,13 @@
+# Welcome to my Notes 
+## My name is Abhay Tripathi and this is my JS notes
+
+
 # 01_basics_notes
 
 ### In javascript
-##### talks  Array = Element  Object = Properties
+If something is written inside the code then it is called  
+Array = Element  
+Object = Properties
  
 ### (1) prefer not to use var
 because var is use for block scope and funtional work
@@ -24,9 +30,6 @@ console.log(typeof(score)); // use of typeof but also use () methods format
 null => object
 undefined => undefined
 True => Boolean
-
-
-
 
 //+++++++++++++ False OR True +++++++++++++++
 
@@ -54,10 +57,21 @@ console.log(undefined <= 0); //false
 ```
 
 ### (4) Primitive types
-7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+7 types of Primitives :  
+1. String  
+2. Number  
+3. Boolearn  
+4. null  
+5. undefined  
+6. Symbol  
+7. BigInt
 
 ### (5) Reference types (Non primitive)
-Array, Objects, Functions
+3 types of Refrences : 
+
+1. Array  
+2. Objects  
+3. Functions  
 
 
 ### (6) object define
@@ -78,7 +92,26 @@ console.log(myCreatedDate.getTime()); //show milliseconds from 1 january 1970 to
 
 # LOOPS_notes
 
-### (1) For creating table
+### (1) For loop
+```javascript
+for (let i = 0; i <= 5; i++) {
+    const element = i;
+    if (element === 5) {
+        // console.log("5 is correct")        
+    }
+    // console.log(element)
+    
+}
+```
+
+### (2) For of loop
+***for-of*** & ***for-in*** loops
+used for Array & Objects
+
+**[ " ", " ", " " ]  
+[ { }, { }, { } ]**
+
+### (2) For creating table
 
 ```javascript
 
@@ -92,14 +125,15 @@ for (let i = 0; i <= 10; i++) {
 }
 ```
 
-### (2) don't use loops without ++ with index
-like this  for (let i = 0; i <= 10; i)
+### (3) don't use loops without ++ with index
+like this  for  
+**(let i = 0; i <= 10; i)**  
 that is consumes more memory in your system 
 many time your system was hanged up
 
 
-### (3) break and continue 
-break get stopped every thing,
+### (4) break and continue 
+**break** get stopped every thing,
 ```javascript
 for (let index = 1; index <= 20; index++){
     if( index == 5){
@@ -110,7 +144,7 @@ for (let index = 1; index <= 20; index++){
    
 }
 ```
-continue is skip the process one time then run again 
+**continue** is skip the process one time then run again 
 ```javascript
 for (let index = 1; index <= 20; index++){
     if( index == 5){
@@ -122,7 +156,7 @@ for (let index = 1; index <= 20; index++){
 }
 ```
 
-### (4) while Array
+### (5) while Loops
 
 ```javascript
 let myArray = ["cap","iron","Thor"]
@@ -134,7 +168,7 @@ while (arr < myArray.length) {
 }
 ```
 
-### (5) Do While loop
+### (6) Do While loop
 first he done work then initialize the condition
 
 ```javascript
@@ -152,9 +186,9 @@ for (const [key, value] of map) {
 }
 ```
 
-forEach loops has many parameters like arr, index , item
 
-### (6) filter loops 
+
+### (7) filter loops 
 if you write curly scopes within then you write the return keyword
 
 ```javascript
@@ -163,9 +197,9 @@ const newNums = myNums.filter( (num) => {
 })
 ```
 
-### (7) map
-if you write curly scopes within then you write the return keyword
-const newNums = myNumbers.map( (num) => { return num + 10})
+### (8) map
+if you write curly scopes within then you write the return keyword  
+**const newNums = myNumbers.map( (num) => { return num + 10})**
 
 ```javascript
 const map = new Map()
@@ -193,7 +227,7 @@ for (const key of myObject) {
 }
 ```
 
-### (8) chaining
+### (9) chaining
 
 ```javascript
 const newNums = myNumbers
@@ -203,7 +237,7 @@ const newNums = myNumbers
                 /.filter( (num) => { return num >= 40})
 ```
 
-### (9) Basic calculation from using loops
+### (10) Basic calculation from using loops
 
 ```javascript
 // sqaure calculation
@@ -217,7 +251,7 @@ function doubleCalculate() {
 doubleCalculate();
 ```
 
-### (10) Table of 2 - 10 
+### (11) Table of 2 - 10 
 ```javascript
 const num = prompt("Please enter a number");
 
@@ -255,13 +289,15 @@ temList[0].style.color= 'red' // change in red color on 1 element
 
 
 
-when system give nodeList you should try 
-like this: temList[0].style.color= 'red'
+when system give nodeList you should try like this:   
+temList[0].style.color= 'red'
 
 
 ### (3) From forEach 
 
-jyada se jyada nodeList me forEach hi use karna 
+forEach loops has many parameters like **arr, index , item**
+
+jyada se jyada nodeList me **forEach** hi use karna 
 or agar map use karna hai hai to nodeList ko convert karo phle array me then try
 ```javascript
 temList.forEach(function (l) {
@@ -285,11 +321,11 @@ together
 ### (4)convert the temClass into Array 
 
 #### temClass like this
-HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+**HTMLCollection(4)** [li.list-item, li.list-item, li.list-item, li.list-item]  
 Array.from(temClass)
 
 #### stored the value
-const myConvertedArray = Array.from(temClass)
+**const myConvertedArray = Array.from(temClass)**
 
 
 ### (5) Targeting
@@ -307,12 +343,12 @@ console.log(dayOne.nextElementSibling);
 
 # Advance_notes
 
-C++ is the core language of js, python and others 
+C++ is the core language of **js, python** and others   
 but this language is wrapper of this C++
 
 ##### V8 engine is very useful to learn debugger
 ###### Github>>Search>>v8>>src>>d8>>d8.console.cc 
-----> in this go (d8-console.cc)  for see where to get console.log and see how to implementation this
+----> in this go **d8-console.cc**  for see where to get console.log and see how to implementation this
 
 #### ====> where did we get the console from
 
@@ -442,19 +478,19 @@ void D8Console::Trace(const debug::ConsoleCallArguments& args,
 
 # OOP notes
 
-## this
-this is use for cureent context like one monday in a month 
+## (1) this
+this is use for **cureent context** like one monday in a month 
 
-##### window is a global object
+##### (1.1)window is a global object
 
-## new keyword
-#### Whenever a new keyword is created, first of all a new empty object is created which is called instance.
-Step 1 ---> new empty object create.  
-Step 2 ---> call constructor function from new keyword (pack all argument)  
-Step 3 ---> inject all thing from this. keyword in code  
-Step 4 ---> function ready
+## (2) new 
+Whenever a **new** keyword is created, first of all a new empty object is created which is called instance.
+1. new empty object create.  
+2. call constructor function from new keyword (pack all argument)  
+3. inject all thing from this. keyword in code  
+4. function ready
 
-### create one user then second but not same
+### (3) create one user then second but not same
 ```javascript
 function User(username, loginCount, isLoggedIn){
     this.username = username // same but diffrent from this keyword
@@ -470,3 +506,23 @@ const userTwo = new User("Tripathi", 15, false)
 console.log(userOne)
 console.log(userTwo)
 ```
+
+### (4) Advance Array
+
+1. how Array check index (value access from array )  
+2. **bound check** (means if value inside in array show output, untill show undefined) that's easy  
+3. hasOwnProperty(array, 9)  
+4. hasOwnProperty(arrTwo.prototype, 10)  
+5. hasOwnProperty(Object.prototype, 10)  
+
+6. holes are vary expensive in js
+
+There are two types of arrays: holey arrays and continuous arrays. These arrays can contain three types of elements: SMI (Small Integer), Packed Element, and Double.
+
+1. **Holey Array**: A holey array is an array that contains missing or empty elements. For example, [1, 2, , 4] is a holey array because it has a missing element. Holey arrays are less optimized for performance.
+
+2. **Continuous Array**: A continuous array is an array that does not contain missing or empty elements. For example, [1, 2, 3, 4] is a continuous array because it has no missing elements. Continuous arrays are more optimized for performance.
+
+In terms of optimization, continuous arrays are more efficient and optimized for various operations compared to holey arrays.
+
+**See the example of arrays Got to 12_advance folder in my JS-coder Github repositories**
