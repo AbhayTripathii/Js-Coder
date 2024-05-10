@@ -32,7 +32,7 @@ const number = 48;
 // Changing const value will display TypeError
 try {
     const number = 42;
-} catch (err) {
+} catgh (err) {
     console.log(err);
 }
 console.log(number); // Output: 48
@@ -41,25 +41,25 @@ console.log(number); // Output: 48
 
 ## Datatypes
 
-1. `Number`	Numeric values can be real number or integers.  
+1. `Number`	Numeric values can be real number or integers. 
 `*var x= number;`*
-2. `String`	Series of multiple characters written in quotes.  
+2. `String`	Series of multiple characters written in quotes. 
 `*var x= “characters”;`*
 3. `Boolean`	Has only two values true or false.	var x= true/false;
-4. `Null`	Special value that represents that the variable is empty.  
+4. `Null`	Special value that represents that the variable is empty. 
 `*var x= null;`*
-5. `Undefined`	Represents a variable which is declared but not assigned any value.	  
+5. `Undefined`	Represents a variable which is declared but not assigned any value.  
 `*let x; / let x= undefined;`*
-6. `Object`	Complex data type that allows us to store a collection of data.	  
+6. `Object`	Complex data type that allows us to store a collection of data.	 
 `*var x= {  
     key: “value”;  
     key: “value”;  
 }`*
-7. `Array`	Stores multiple values of same type in a single variable.  
+7. `Array`	Stores multiple values of same type in a single variable. 
 `*var x =[‘y1’, ‘y2′,’y3′,’y4’];
 y: any datatype`*
 
-8. `Function`	Functions are objects that can be called to execute a block of code.  
+8. `Function`	Functions are objects that can be called to execute a block of code. 
 `function x(arguments){
     block of code
 }`
@@ -97,7 +97,7 @@ console.log(value2);
 const object = {
     firstName: "Tripathi",
     lastName: null,
-    batch: 2,
+    batgh: 2,
 };
 console.log(object);
 
@@ -105,21 +105,21 @@ console.log(object);
 
 ## Operators
 
-1. `Arithmetic`	Used to perform basic arithmetic operations on variables(operands).   
+1. `Arithmetic`	Used to perform basic arithmetic operations on variables(operands).  
 `+,-,*,/,%,++,–`
-2. `Comparison`	used to compare two operands.  
+2. `Comparison`	used to compare two operands. 
 `==, ===,!=,>,<,>=,<=`
-3. `Bitwise`	Used to perform bitwise operations.  
+3. `Bitwise`	Used to perform bitwise operations. 
 `&, | , ^,~,<<, >>, >>>`
 4. `Logical`	
 There are three logical operators in javascript.  
-`logical AND:` When all the operands are true  
---`exp1 && exp2`   
-`logical OR:` When one or more than one operands are true   
---`exp1 ||exp2`  
-`logical NOT:` Converts true to false  
---`!exp`
-5. `Assignment`	Assignment operators assign values to JavaScript variables.  
+`logical AND:` When all the operands are true 
+`exp1 && exp2`   
+`logical OR:` When one or more than one operands are true 
+`exp1 ||exp2`  
+`logical NOT:` Converts true to false
+`!exp`
+5. `Assignment`	Assignment operators assign values to JavaScript variables.
 `=, +=,-=,*=,/=,%=`
 
 ```javascript
@@ -152,7 +152,7 @@ console.log("x-- = ", x--);
 console.log("x = ", x); // 5
 
 // Exponentiation
-console.log("x ` y =", x ` y);
+console.log("x ` y =", x  y);
 
 // Comparison
 console.log(x > y); // true
@@ -190,7 +190,7 @@ console.log(!(x < 6)); // false
 5. `eval()	Used` for evaluating JavaScript programs presented as strings.
 6. `prompt()`	Creates a dialogue box for taking input from the user.
 7. `encodeURI()`	Encodes a URI into a UTF-8 encoding scheme.
-8. `match()`	Used to search a string for a match against regular expression.
+8. `matgh()`	Used to search a string for a matgh against regular expression.
 
 ```javascript
 // JS parseInt function
@@ -200,8 +200,8 @@ console.log('Using parseInt("3.14") = ' + num1);
 // JS parsefloat function
 // It returns floating point Number until 
 // it encounters Not a Number character
-const num2 = parseFloat("2018.12@geeksforgeeks");
-console.log('parseFloat("2018@geeksforgeeks") = ' + num2);
+const num2 = parseFloat("2018.12@AbhayTripathiiGithub");
+console.log('parseFloat("2018@AbhayTripathiiGithub") = ' + num2);
 
 // JS isNAN function
 console.log(isNaN(12));
@@ -428,7 +428,7 @@ else
 
 ## Strings
 1. `concat()`	Used for concatenating multiple strings into a single string.
-2. `match()`	Used for finding matche of a string against a provided pattern.
+2. `matgh()`	Used for finding matghe of a string against a provided pattern.
 3. `replace()`	Used for finding and replacing a given text in string.
 4. `substr()`	Used to extract length characters from a given string.
 5. `slice()`	Used for extracting an area of the string and returs it
@@ -450,8 +450,8 @@ console.log(marvel);
 // concat() method
 console.log(mcu.concat(marvel));
 
-// match() method
-console.log(marvel.match(/arv/));
+// matgh() method
+console.log(marvel.matgh(/arv/));
 
 // charAt() method
 console.log(marvel.charAt(5));
@@ -509,13 +509,13 @@ You can also use regEx() to create regular expression in javascript:
 4.   `\uxxxx`	Used to find the Unicode character specified by the hexadecimal number
 
 ## Quantifiers:
-They provide the minimum number of instances of a character, group, or character class in the input required to find a match.
+They provide the minimum number of instances of a character, group, or character class in the input required to find a matgh.
 
-1. `n+`	Used to match any string that contains at least one n
-2. `n*`	Used to match any string that contains zero or more occurrences of n
-3. `n?`	Used to matches any string that contains zero or one occurrences of n
-4. `n{x}`	Matches strings that contain a sequence of X n’s
-5. `^n`	Matches strings with n in the first place
+1. `n+`	Used to matgh any string that contains at least one n
+2. `n*`	Used to matgh any string that contains zero or more occurrences of n
+3. `n?`	Used to matghes any string that contains zero or one occurrences of n
+4. `n{x}`	Matghes strings that contain a sequence of X n’s
+5. `^n`	Matghes strings with n in the first place
 
 ```javascript
 // Program to validate the email address
@@ -683,7 +683,7 @@ console.log(msec);
 </head>
 
 <body>
-    <h1>GeeksforGeeks</h1>
+    <h1>AbhayTripathiiGithub</h1>
     <h2>DOM appendChild() Method</h2>
     <div id="sudo">
         The Good Website is learning for developing is-
@@ -691,7 +691,7 @@ console.log(msec);
     <button onclick="geeks()">Submit</button>
     <br />
     <div style="border: 3px solid green">
-        <h1>GeeksforGeeks</h1>
+        <h1>AbhayTripathiiGithub</h1>
         <h2>A developer portal for geeks</h2>
     </div>
     <h2>DOM cloneNode() Method</h2>
@@ -700,7 +700,7 @@ console.log(msec);
     </button>
     <br />
     <h2>DOM hasAttributes() Method</h2>
-    <p id="gfg">
+    <p id="atg">
         Click on the button to check if that
         body element has any attributes
     </p>
@@ -724,7 +724,7 @@ console.log(msec);
     <button id="button" onclick="getAttr()">
         Submit
     </button>
-    <p id="gfg1"></p>
+    <p id="atg1"></p>
     <br />
     <h2>DOM getElementsByTagName()</h2>
     <p>A computer science portal for geeks.</p>
@@ -733,9 +733,9 @@ console.log(msec);
     </button>
     <h3>DOM isEqualNode() method .</h3>
     <!-- 3 div elements-->
-    <div>GeeksforGeeks</div>
-    <div>GfG</div>
-    <div>GeeksforGeeks</div>
+    <div>AbhayTripathiiGithub</div>
+    <div>atg</div>
+    <div>AbhayTripathiiGithub</div>
     <button onclick="isequal()">
         Check
     </button>
@@ -743,7 +743,7 @@ console.log(msec);
     <script>
         function geeks() {
             var node = document.createElement("P");
-            var t = document.createTextNode("GeeksforGeeks");
+            var t = document.createTextNode("AbhayTripathiiGithub");
             node.appendChild(t);
             document.getElementById("sudo").appendChild(node);
         }
@@ -759,7 +759,7 @@ console.log(msec);
         }
         function hasAttr() {
             var s = document.body.hasAttributes();
-            document.getElementById("gfg").innerHTML = s;
+            document.getElementById("atg").innerHTML = s;
         }
 
         function Geeks() {
@@ -770,7 +770,7 @@ console.log(msec);
         /* Using getElementById */
         function getAttr() {
             var rk = document.getElementById("button").getAttribute("onClick");
-            document.getElementById("gfg1").innerHTML = rk;
+            document.getElementById("atg1").innerHTML = rk;
         }
 
         /* Using getElementsByTagName */
@@ -848,7 +848,7 @@ console.log(msec);
 
 
 <script>
-    document.getElementById("GFG").innerHTML =
+    document.getElementById("atg").innerHTML =
         "Math.LN10: " + Math.LN10 + "<br>" +
         "Math.LOG2E: " + Math.LOG2E + "<br>" +
         "Math.Log10E: " + Math.LOG10E + "<br>" +
@@ -898,9 +898,9 @@ console.log(msec);
 ## Error
 
 1. `try`	Tests a block of code to check for errors.
-2. `catch`	Handles the error if any are present.
+2. `catgh`	Handles the error if any are present.
 3. `throw`	Allows construction of new errors.
-4. `finally`	Executes code after try and catch.
+4. `finally`	Executes code after try and catgh.
 
 ```html
 <!DOCTYPE html>
@@ -908,7 +908,7 @@ console.log(msec);
 
 <body>
     <h2>
-        JavaScript throw try catch finally keywords
+        JavaScript throw try catgh finally keywords
     </h2>
     <p>Please enter a number:</p>
     <input id="demo" type="text" />
@@ -922,14 +922,14 @@ console.log(msec);
             message.innerHTML = "";
             let x = document.getElementById("demo").value;
 
-            /* Using try.. catch.. with conditions*/
+            /* Using try.. catgh.. with conditions*/
             try {
                 if (x == "") throw "is empty";
                 if (isNaN(x)) throw "is not a number";
                 x = Number(x);
                 if (x > 20) throw "is too high";
                 if (x <= 20) throw "is too low";
-            } catch (err) {
+            } catgh (err) {
                 message.innerHTML = "Input " + err;
             } finally {
                 document.getElementById("demo").value = "";
@@ -944,3 +944,212 @@ console.log(msec);
 
 ## Windows Property
 
+1. `window`	Returns the current window or frame.
+2. `screen`	Returns the window’s Screen object.
+3. `toolbar`	Creates a toolbar object, whose visibility can be toggled in the window.
+4. `Navigator`	Returns the window’s Navigator object.
+5. `frames[]`	Returns all **iframe** elements in the current window.
+6. `document`	Returns a reference to the document object.
+7. `closed`	Boolean used to check whether the window is closed or not.
+8. `length`	Represents the number of frames in the current window.
+9. `History`	Provides the window’s History object.
+
+```javascript
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>The Window properties</h1>
+    <h2>The origin Property</h2>
+
+    <p id="demo"></p>
+    <br />
+    <button type="button" onclick="getResolution();">
+        Get Resolution
+    </button>
+    <br />
+    <button type="button" onclick="checkConnectionStatus();">
+        Check Connection Status
+    </button>
+    <br />
+    <button type="button" onclick="getViews();">
+        Get Views Count</button>
+    <br />
+    <p>
+        <button onclick="closeWin()">
+            Close "myWindow"
+        </button>
+    </p>
+
+    <script>
+        // JS location property
+        let origin = window.location.origin;
+        document.getElementById("demo").innerHTML = origin;
+
+        // JS screen property
+        function getResolution() {
+            alert("Your screen is: " + screen.width + "x" + screen.height);
+        }
+
+        // JS toolbar property
+        var visible = window.toolbar.visible;
+
+        // JS navigator property
+        function checkConnectionStatus() {
+            if (navigator.onLine) {
+                alert("Application is online.");
+            } else {
+                alert("Application is offline.");
+            }
+        }
+        // JS history property
+        function getViews() {
+            alert(
+                "You've accessed " + history.length + " web pages in this session."
+            );
+        }
+        // JS close property
+        let myWindow;
+        function closeWin() {
+            if (myWindow) {
+                myWindow.close();
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+```
+1. `alert()`	Shows a message and an OK button in an alert box.
+2. `print()`	Prints the current window’s content.
+3. `blur()`	Removes the current window’s focus.
+4. `setTimeout()`	Evaluates an expression after a specified time interval.
+5. `clearTimeout()`	Removes the timer that was set with setTimeout()
+6. `setInterval()`	Evaluates an expression at intervals defined by the user.
+7. `prompt()`	Shows a conversation window asking for feedback from the visitor.
+8. `close()`	Closes the currently open window.
+9. `focus()`	Sets the current window’s focus.
+10. `resizeTo()`	Resizes the window to the width and height supplied.
+
+```javascript
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Window Methods</title>
+    /* CSS is used to make the output looks good */
+    <style>
+        .atg {
+            font-size: 36px;
+        }
+
+        form {
+            float: right;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="atg">JavaScript Window Methods</div>
+    <br />
+    <button onclick="windowOpen()">
+        JavaScript window Open
+    </button>
+    <button onclick="resizeWin()">
+        JavaScript window resizeTo
+    </button>
+    <button onclick="windowBlur()">
+        JavaScript window Blur
+    </button>
+    <button onclick="windowFocus()">
+        JavaScript window Focus
+    </button>
+    <button onclick="windowClose()">
+        JavaScript window Close
+    </button>
+    <br />
+    <br />
+    <p id="g"></p>
+    <form>
+        <button onclick="setTimeout(wlcm, 2000);">
+            Alert after 2 Second
+        </button>
+        <button onclick="abhay()">Click me!</button>
+        <input type="button" value="Print" onclick="window.print()" />
+    </form>
+    <br /><br />
+    <button id="btn" onclick="fun()" style="color: green">
+        JavaScript Used setTimeOut
+    </button>
+    <button id="btn" onclick="stop()">
+        JavaScript clearTimeout
+    </button>
+    <script>
+        var atgWindow;
+
+        // Function that open the new Window
+        function windowOpen() {
+            atgWindow = window.open(
+                "https://www.AbhayTripathiiGithub.org/",
+                "_blank",
+                "width=200, height=200"
+            );
+        }
+
+        // Function that Resize the open Window
+        function resizeWin() {
+            atgWindow.resizeTo(400, 400);
+            atgWindow.focus();
+        }
+
+        // Function that Closes the open Window
+        function windowClose() {
+            atgWindow.close();
+        }
+
+        // Function that blur the open Window
+        function windowBlur() {
+            atgWindow.blur();
+        }
+
+        // Function that focus on open Window
+        function windowFocus() {
+            atgWindow.focus();
+        }
+
+        // Alert function
+        function wlcm() {
+            alert("Welcome to AbhayTripathiiGithub");
+        }
+
+        // Prompt function
+        function abhay() {
+            var doc = prompt("Please enter some text", "AbhayTripathiiGithub");
+            if (doc != null) {
+                document.getElementById("g").innerHTML = "Welcome to " + doc;
+            }
+        }
+
+        // Function setTimeout and clearTimeout
+        var t;
+        function color() {
+            if (document.getElementById("btn").style.color == "blue") {
+                document.getElementById("btn").style.color = "green";
+            } else {
+                document.getElementById("btn").style.color = "blue";
+            }
+        }
+        function fun() {
+            t = setTimeout(color, 3000);
+        }
+        function stop() {
+            clearTimeout(t);
+        }
+    </script>
+</body>
+
+</html>
+
+```
