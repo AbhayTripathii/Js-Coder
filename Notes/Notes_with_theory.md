@@ -644,3 +644,303 @@ let msec = Date.parse(date);
 console.log(msec);
 
 ```
+
+## DOM
+
+1. `appendChild()`	Adds a new child node as the last child node.
+2. `cloneNode()`	Duplicates an HTML element.
+3. `hasAttributes()`	Returns true If an element has any attributes otherwise,returns false.
+4. `removeChild()`	Removes a child node from an element using the Child() method.
+5. `getAttribute()`	Returns the value of an element node’s provided attribute.
+6. `getElemetsByTagName()`	Returns a list of all child elements.
+7. `isEqualNode()`	Determines whether two elements are same.
+
+
+**Example**
+
+```javascript
+<!DOCTYPE html>
+<html>
+
+<head>
+    /* CSS is used to make the output looks good */
+    <style>
+        #sudo {
+            border: 1px solid green;
+            background-color: green;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksforGeeks</h1>
+    <h2>DOM appendChild() Method</h2>
+    <div id="sudo">
+        The Good Website is learning for developing is-
+    </div>
+    <button onclick="geeks()">Submit</button>
+    <br />
+    <div style="border: 3px solid green">
+        <h1>GeeksforGeeks</h1>
+        <h2>A developer portal for geeks</h2>
+    </div>
+    <h2>DOM cloneNode() Method</h2>
+    <button onclick="nClone()">
+        Click here to clone the above elements.
+    </button>
+    <br />
+    <h2>DOM hasAttributes() Method</h2>
+    <p id="gfg">
+        Click on the button to check if that
+        body element has any attributes
+    </p>
+    <button type="button" onclick="hasAttr()">
+        Submit
+    </button>
+    <br />
+    <h2>DOM removeChild() Method</h2>
+    <p>Sorting Algorithm</p>
+    <ul id="listitem">
+        <li>Insertion sort</li>
+        <li>Merge sort</li>
+        <li>Quick sort</li>
+    </ul>
+    <button onclick="Geeks()">
+        Click Here!
+    </button>
+    <br />
+    <h2>DOM getAttribute() Method</h2>
+    <br />
+    <button id="button" onclick="getAttr()">
+        Submit
+    </button>
+    <p id="gfg1"></p>
+    <br />
+    <h2>DOM getElementsByTagName()</h2>
+    <p>A computer science portal for geeks.</p>
+    <button onclick="getElememt()">
+        Try it
+    </button>
+    <h3>DOM isEqualNode() method .</h3>
+    <!-- 3 div elements-->
+    <div>GeeksforGeeks</div>
+    <div>GfG</div>
+    <div>GeeksforGeeks</div>
+    <button onclick="isequal()">
+        Check
+    </button>
+    <p id="result"></p>
+    <script>
+        function geeks() {
+            var node = document.createElement("P");
+            var t = document.createTextNode("GeeksforGeeks");
+            node.appendChild(t);
+            document.getElementById("sudo").appendChild(node);
+        }
+        function nClone() {
+            // Accessing div attribute using a variable geek
+            var geek = document.getElementsByTagName("DIV")[0];
+
+            // Cloning geek variable into a variable named clone
+            var clone = geek.cloneNode(true);
+
+            // Adding our clone variable to end of the document
+            document.body.appendChild(clone);
+        }
+        function hasAttr() {
+            var s = document.body.hasAttributes();
+            document.getElementById("gfg").innerHTML = s;
+        }
+
+        function Geeks() {
+            var doc = document.getElementById("listitem");
+            doc.removeChild(doc.childNodes[0]);
+        }
+
+        /* Using getElementById */
+        function getAttr() {
+            var rk = document.getElementById("button").getAttribute("onClick");
+            document.getElementById("gfg1").innerHTML = rk;
+        }
+
+        /* Using getElementsByTagName */
+        function getElement() {
+            var doc = document.getElementsByTagName("p");
+            doc[0].style.background = "green";
+            doc[0].style.color = "white";
+        }
+
+        /* Cheacking the equality */
+        function isequal() {
+            var out = document.getElementById("result");
+            var divele = document.getElementsByTagName("div");
+            out.innerHTML +=
+                "element 1 equals element 1: " +
+                divele[0].isEqualNode(divele[0]) +
+                "<br/>";
+            out.innerHTML +=
+                "element 1 equals element 2: " +
+                divele[0].isEqualNode(divele[1]) +
+                "<br/>";
+            out.innerHTML +=
+                "element 1 equals element 3: " +
+                divele[0].isEqualNode(divele[2]) +
+                "<br/>";
+        }
+    </script>
+</body>
+
+</html>
+
+```
+
+## Numbers and Math
+
+1. `valueOf()`	Returns a number in its original form.
+2. `toString()`	Returns string representation of an integer.
+3. `toFixed()`	Returns a number’s string with a specified number of decimals.
+4. `toPricision()`	Converts a number to a string of a specified length.
+5. `toExponential()`	Returns a rounded number written in exponential notation.
+6. `max(x,y,z…n)`	Returns the highest-valued number
+7. `min(x,y,z…n)`	Returns the lowest-valued number
+8. `exp(x)`	Returns x’s exponential value.
+9. `log(x)`	Returns the natural logarithm (base E) of x.
+10. `sqrt(x)`	Returns x’s square root value.
+11. `pow(x,y)`	Returns the value of x to the power of y
+12. `round(x)`	Rounds the value of x to the nearest integer
+13. `sin(x)`	Finds the sine value of x(x is in radians).
+14. `tan(x)`	Finds the angle’s(x) tangent value.
+
+```html
+<script type="text/javascript">
+    var num = 213;
+    var num1 = 213.3456711;
+
+    // JS valueof() Method
+    console.log("Output : " + num.valueOf());
+
+    // JS tostring() Method
+    console.log("Output : " + num.toString(2));
+
+    // JS tofixed() Method
+    console.log("Output : " + num1.toString(2));
+
+    // JS topricision() Method
+    console.log("Output : " + num1.toPrecision(3));
+
+    // JS toexponential() Method
+    console.log("Output : " + num1.toExponential(4));
+</script>
+
+
+
+ <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<script>
+    document.getElementById("GFG").innerHTML =
+        "Math.LN10: " + Math.LN10 + "<br>" +
+        "Math.LOG2E: " + Math.LOG2E + "<br>" +
+        "Math.Log10E: " + Math.LOG10E + "<br>" +
+        "Math.SQRT2: " + Math.SQRT2 + "<br>" +
+        "Math.SQRT1_2: " + Math.SQRT1_2 + "<br>" +
+        "Math.LN2: " + Math.LN2 + "<br>" +
+        "Math.E: " + Math.E + "<br>" +
+        "Math.round: " + Math.round(5.8) + "<br>" +
+        "Math.PI: " + Math.PI + "<br>" +
+        "
+        < p > <b>Math.sin(90 * Math.PI / 180):</b> " +
+    Math.sin(90 * Math.PI / 180) + "</p>
+    " +
+    "
+        < p > <b>Math.tan(90 * Math.PI / 180):</b> " +
+    Math.tan(90 * Math.PI / 180) + "</p>
+    " +
+    "
+        < p > <b>Math.max(0, 150, 30, 20, -8, -200):</b> " +
+    Math.max(0, 150, 30, 20, -8, -200) + "</p>
+    " +
+    "
+        < p > <b>Math.min(0, 150, 30, 20, -8, -200):</b> " +
+    Math.min(0, 150, 30, 20, -8, -200) + "</p>
+    " +
+    "
+        < p > <b>Math.pow(3,4):</b> " + Math.pow(3, 4) + "</p >
+            ";
+</script>
+
+
+```
+
+## Events
+1. `onclick()`	Triggers an event when an element is clicked.
+2. `onkeyup()`	Executes instructions whenever a key is released after pressing.
+3. `onmouseover()`	Triggers an event when mouse pointer is hovered over an element
+4. `onmouseout()`	Triggers an event when mouse pointer is moved away from an element.
+5. `onchange()`	Detects the change in value of any element listing to this event.
+6. `onload()`	Evokes an event when an element is completely loaded.
+7. `onfocus()`	Triggers when an aspect is brought into focus.
+8. `onblur()`	Evoked an event when an element loses focus.
+9. `onsubmit()`	Evokes an event when a form is submitted
+10. `ondrag()`	Invokes an event when an element is dragged.
+11. `oninput()`	Triggers when an input field gets any value.
+
+## Error
+
+1. `try`	Tests a block of code to check for errors.
+2. `catch`	Handles the error if any are present.
+3. `throw`	Allows construction of new errors.
+4. `finally`	Executes code after try and catch.
+
+```html
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>
+        JavaScript throw try catch finally keywords
+    </h2>
+    <p>Please enter a number:</p>
+    <input id="demo" type="text" />
+    <button type="button" onclick="myFunction()">
+        Test Input
+    </button>
+    <p id="p01"></p>
+    <script>
+        function myFunction() {
+            const message = document.getElementById("p01");
+            message.innerHTML = "";
+            let x = document.getElementById("demo").value;
+
+            /* Using try.. catch.. with conditions*/
+            try {
+                if (x == "") throw "is empty";
+                if (isNaN(x)) throw "is not a number";
+                x = Number(x);
+                if (x > 20) throw "is too high";
+                if (x <= 20) throw "is too low";
+            } catch (err) {
+                message.innerHTML = "Input " + err;
+            } finally {
+                document.getElementById("demo").value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+```
+
+## Windows Property
+
