@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Validation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      .hero {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .input-group {
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+      }
+      #email-field {
+        display: block;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid #555;
+        background: transparent;
+        outline: none;
+        font-size: 26px;
+        padding: 5px 2px;
+        position: relative;
+        z-index: 10;
+      }
+
+      #email-label {
+        display: block;
+        position: absolute;
+        bottom: 5px;
+        left: 2px;
+        color: #777;
+        font-size: 18px;
+        transition: bottom 0.2s;
+      }
+      #email-error {
+        position: absolute;
+        top: 100%;
+        left: 2px;
+        font-size: 16px;
+        font-weight: 400;
+        color: red;
+        transition: top 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="input-group">
+        <label id="email-label">EMAIL</label>
+        <input
+          type="email"
+          spellcheck="false"
+          id="email-field"
+          onkeyup="validateEmail()"
+        />
+        <span id="email-error">error msg</span>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let emailField = document.getElementById("email-field");
+    let emailLabel = document.getElementById("email-label");
+    let emailError = document.getElementById("email-error");
+
+    function validateEmail() {
+      emailLabel.style.bottom = "40px";
+
+      if (
+        !emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
+      ) {
+        emailError.innerHTML = "Please enter a valid email address";
+        emailField.style.borderBottomColor = "red";
+        emailError.style.top = "120%";
+        return false;
+      }
+
+      emailError.innerHTML = "";
+      emailField.style.borderBottomColor = "green";
+      emailError.style.top = "100%";
+      return true;
+    }
+  </script>
+</html>
