@@ -874,6 +874,16 @@ const Typer = {
 Typer.startTyping();
 
 ```
+### Summarry of project 8 (how it's work)
+. This code creates a typewriter effect library called **`Typer`**. It displays text one word at a time, then erases it before moving on to the next word. Key points:
+
+1. The `Typer` object stores the typed text span, cursor element, an array of words to type, and the current word and character indices.
+2. The `type` function gradually types out the current word character by character until the entire word is displayed. It then triggers the `erase` function.
+3. The `erase` function gradually erases the typed word character by character until it's completely erased. It then moves to the next word and starts typing again.
+4. The `startTyping` function initiates the typing process.  
+
+. Adjustments to typing speed, erasing speed, and delays between words can be made by modifying the `setTimeout` intervals within the `type` and `erase` functions. 
+
 
 ## Project 9 Mouse Circle
 #### HTML
