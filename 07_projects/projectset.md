@@ -1,12 +1,13 @@
 # Projects related to DOM
 
-## project link
+## project link (My stackblitz platform)
 [Click here](https://stackblitz.com/edit/dom-project-7h4u4z?file=index.html)
 
 # All Project code (Abhay Tripathi)
 
-## Project 1
+## Project 1 Color Changer
 
+#### HTML Code
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +55,7 @@
 </html>
 
 ```
-
+#### CSS code
 ```css
 html {
   margin: 0;
@@ -92,7 +93,7 @@ span {
 
 ```
 
-
+#### JAVASCRIPT code
 ```javascript
 console.log("abhay")
 const buttons = document.querySelectorAll('.button');
@@ -122,8 +123,8 @@ buttons.forEach(function (button) {
 
 ```
 
-## Project 2
-
+## Project 2 BMI calculator
+#### HTML code
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -162,7 +163,7 @@ buttons.forEach(function (button) {
 </html>
 
 ```
-
+#### CSS code
 ```css
 .container {
   width: 575px;
@@ -212,7 +213,7 @@ h1 {
 }
 
 ```
-
+#### JAVASCRIPT code
 ```javascript
 const form = document.querySelector('form')
 // this usecase will give oyu empty
@@ -258,8 +259,8 @@ form.addEventListener('submit', function(e){
 
 ```
 
-## Project 3 
-
+## Project 3 Digital Clock 
+#### HTML code
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -306,7 +307,7 @@ form.addEventListener('submit', function(e){
 </html>
 
 ```
-
+#### JAVASCRIPT code
 ```javascript
 const clock = document.getElementById('clock')
 // document.querySelector('clock')
@@ -323,8 +324,8 @@ setInterval(function() {
 }, 1000);
 ```
 
-## Project 4 
-
+## Project 4 Guess The Number 
+#### HTML code
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -365,6 +366,7 @@ setInterval(function() {
 </body>
 </html>
 ```
+#### CSS code
 ```css
 html {
   font-family: sans-serif;
@@ -459,7 +461,7 @@ p {
 }
 
 ```
-
+#### JAVASCRIPT code
 ```javascript
 
 let randomNumber = parseInt(Math.random() * 100 + 1);
@@ -576,8 +578,8 @@ function newGame(){
 ```
 
 
-# Project 5
-
+# Project 5 Keyboard Check
+#### HTML code
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -628,7 +630,7 @@ function newGame(){
 </html>
 
 ```
-
+#### JAVASCRIPT code
 ```javascript
 const insert = document.getElementById('insert');
 
@@ -655,8 +657,8 @@ window.addEventListener('keydown', (e) => {
 
 ```
 
-# Project 6
-
+# Project 6 Unlimited colors
+#### HTML code
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -684,7 +686,7 @@ window.addEventListener('keydown', (e) => {
 </html>
 
 ```
-
+#### JAVASCRIPT code
 ```javascript
 // generate a random colors
 
@@ -722,4 +724,274 @@ document.querySelector('#start').addEventListener('click', startChangingColor)
 
 
 document.querySelector('#stop').addEventListener('click', stopChangingColor)
+```
+
+
+## Project 8 Typer Library
+#### HTML code
+```html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Text</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      <span class="js">JavaScript</span> Is 
+      <span class="typed-text"></span>
+      <span class="cursor">&nbsp;</span>
+    </p>
+
+    <script src="./chaiaurcode.js"></script>
+  </body>
+</html>
+```
+
+#### CSS
+```css
+<!--   css code    -->
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+p {
+  font-size: 3rem;
+}
+
+.js {
+  color: #fdfdfc;
+}
+
+.typed-text {
+  color: #de8512;
+}
+
+.cursor {
+  background: #dbe912;
+}
+```
+#### Javascript
+```javascript
+const Typer = {
+  typedTextSpan: document.querySelector('.typed-text'),
+  cursor: document.querySelector('.cursor'),
+  words: ['Love', 'Jhakaas', 'mast', 'dhinchak', 'Weird'],
+  wordIndex: 0,
+  charIndex: 0,
+  isTyping: true,
+
+  
+  type: function() {
+    if (this.isTyping) {
+      if (this.charIndex < this.words[this.wordIndex].length) {
+        this.typedTextSpan.textContent += this.words[this.  wordIndex].charAt(this.charIndex);
+        this.charIndex++;
+        setTimeout(() => this.type(), 100); // Adjust typing speed   here
+      } else {
+        // Start erasing after typing is complete
+        setTimeout(() => this.erase(), 1500); // Adjust delay   before erasing here
+      }
+    }
+  },
+  
+    erase: function() {
+      if (this.isTyping) {
+        if (this.charIndex > 0) {
+          this.typedTextSpan.textContent = this.words[this.  wordIndex].substring(0, this.charIndex - 1);
+          this.charIndex--;
+          setTimeout(() => this.erase(), 50); // Adjust erasing   speed here
+        } else {
+          // Move to the next word or loop back to the beginning
+          this.wordIndex = (this.wordIndex + 1) % this.words.  length;
+          setTimeout(() => this.type(), 500); // Adjust delay   before typing next word here
+        }
+      }
+    },
+  
+    startTyping: function() {
+      this.isTyping = true;
+      this.type();
+    },
+  
+    stopTyping: function() {
+      this.isTyping = false;
+    }
+};
+
+// Start typing
+Typer.startTyping();
+
+// +++++++++UPPER++++++++AND++++++++++++BELOW++++++++++++same code but different
+
+const Typer = {
+  typedTextSpan: document.querySelector('.typed-text'),
+  cursor: document.querySelector('.cursor'),
+  words: ['Love', 'Jhakaas', 'mast', 'dhinchak', 'Weird', 'Awesome', 'logical ', 'confusion'],
+  wordIndex: 0,
+  charIndex: 0,
+
+  type: function() {
+    if (this.charIndex < this.words[this.wordIndex].length) {
+      this.typedTextSpan.textContent += this.words[this.wordIndex].charAt(this.charIndex);
+      this.charIndex++;
+      setTimeout(() => this.type(), 100);
+    } else {
+      setTimeout(() => this.erase(), 1200);
+    }
+  },
+
+  erase: function() {
+    if (this.charIndex > 0) {
+      this.typedTextSpan.textContent = this.words[this.wordIndex].substring(0, this.charIndex - 1);
+      this.charIndex--;
+      setTimeout(() => this.erase(), 50);
+    } else {
+      this.wordIndex = (this.wordIndex + 1) % this.words.length;
+      setTimeout(() => this.type(), 500);
+    }
+  },
+
+  startTyping: function() {
+    this.type();
+  }
+};
+
+Typer.startTyping();
+
+```
+
+## Project 9 Mouse Circle
+#### HTML
+```html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="container">
+      <h1>Mouse Cursor Project</h1>
+      <p>You can only manage people, not the time</p>
+      <p>- Abhay Tripathi</p>
+      <button>My Github</button>
+    </div>
+
+    <script src="abhay.js"></script>
+  </body>
+</html>
+
+```
+#### CSS
+```css
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+
+body {
+  height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Playfair Display SC', serif;
+}
+
+p {
+  color: #fff;
+  max-width: 700px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  line-height: 22px;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: transparent;
+  background: transparent;
+  color: #fff;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* JavaScript */
+div.cursor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: yellow;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: cursor 6s infinite alternate;
+}
+
+```
+#### Javascript
+```javascript
+const cursor = document.querySelector('.cursor');
+// an array of 10 colors in hex value
+const colors = [
+  '#FF6633',
+  '#FFB399',
+  '#FF33FF',
+  '#FFFF99',
+  '#00B3E6',
+  '#E6B333',
+  '#3366E6',
+  '#999966',
+  '#99FF99',
+  '#B34D4D',
+];
+// add circle to cursor and change it's color as cursor moves on the screen. Pick color from these array
+
+  // Function to move cursor and change color
+  function moveCursorAndChangeColor(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    // Move cursor to the mouse position
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+
+    // Change cursor color based on position
+    const index = Math.floor(x / window.innerWidth * colors.length);
+    cursor.style.backgroundColor = colors[index];
+  }
+  // Event listener for mouse movement
+  document.addEventListener('mousemove', moveCursorAndChangeColor);
+
 ```
