@@ -1005,3 +1005,105 @@ const colors = [
   document.addEventListener('mousemove', moveCursorAndChangeColor);
 
 ```
+
+## Project 10 Emojis
+#### HTML Code
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Emojies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h4>
+      As a user hover the mouse over emoji, get a new emoji. As the user moves
+      away mouse turn it into gray-scale
+    </h4>
+    <div id="emoji">🤣</div>
+
+    <script src="abhay.js"></script>
+  </body>
+</html>
+
+```
+#### CSS Code
+```css
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+}
+
+#emoji {
+  font-size: 10rem;
+  filter: grayscale(1);
+  transition-property: transfrom, filter;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+#emoji:hover {
+  transform: scale(1.3);
+  filter: grayscale(0);
+}
+
+```
+
+#### JAVASCRIPT Code
+```javascript
+const btn = document.querySelector('#emoji');
+const emojis = [
+  '😆',
+  '😅',
+  '🤣',
+  '😂',
+  '😀',
+  '🤑',
+  '🤨',
+  '🙂',
+  '😊',
+  '😗',
+  '😛',
+  '😏',
+  '🤥',
+  '😴',
+  '🥺',
+  '😧',
+  '😇',
+  '😳',
+  '🙃',
+  '🥴',
+  '🧐',
+  '🤨',
+  '😒',
+  '🤔',
+  '🤭',
+  '🥰',
+  '🤐',
+  '👀',
+  '🤔',
+  '🤪',
+  '😬',
+];
+
+
+// Event listener for mouse enter
+btn.addEventListener('mouseenter', function() {
+  btn.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+});
+
+// Event listener for mouse leave
+btn.addEventListener('mouseleave', function() {
+  btn.innerHTML = '🤣'; // Default emoji when mouse leaves
+  // grayscale(); // Convert emoji to grayscale
+});
+
+
+```
