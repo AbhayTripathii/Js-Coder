@@ -3,7 +3,7 @@
 ## project link (My stackblitz platform)
 [Click here](https://stackblitz.com/edit/dom-project-7h4u4z?file=index.html)
 
-# All Project code (Abhay Tripathi)
+# 1 - 5 Project code (Abhay Tripathi)
 
 ## Project 1 Color Changer
 
