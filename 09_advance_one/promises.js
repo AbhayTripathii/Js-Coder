@@ -10,7 +10,7 @@ const promiseOne = new Promise(function(resolve, reject){
 })
 
 
-promiseOne.then(function(){
+promiseOne.then(function(){ // resolve direct connection with then
     console.log("Promise consumed");
 })
 
