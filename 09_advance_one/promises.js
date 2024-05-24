@@ -5,7 +5,7 @@ const promiseOne = new Promise(function(resolve, reject){
     // DB calls, cryptography, network
     setTimeout(function(){
         console.log('Async task is completed');
-        resolve()
+        resolve() // connect from 13,14,15 line to show output
     }, 1000)
 })
 
